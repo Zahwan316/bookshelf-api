@@ -33,7 +33,7 @@ const editBook = (req,h) => {
         return response
     }
 
-    const findIndex = books.findIndex((item) => item.id == parseInt(bookId))
+    const findIndex = books.findIndex((item) => item.id == bookId)
 
     if(findIndex !== -1){
         books[findIndex] = {
