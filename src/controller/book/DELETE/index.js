@@ -1,13 +1,10 @@
 const {books} = require("../../../data/bookshelf")
 
 const deleteBook = (req,h) => {
-    //readbookfile()
     const {bookId} = req.params
     const findbookindex = books.findIndex((item) => item.id == bookId)
-    console.log(findbookindex)
     if(findbookindex !== -1){
         books.splice(findbookindex,1)
-        //writebookfile()
         const response = h.response({
             status:"success",
             message:"Buku berhasil dihapus"

@@ -7,7 +7,7 @@ const allBook = (req,h) => {
     })
 
     if(name){
-        const findbook = books.filter((item) => item.name.includes(name)).map(item => {return {id:item.id,name:item.name,publisher:item.publisher}});
+        const findbook = books.filter((item) => item.name.toLowerCase().includes(name.toLowerCase())).map(item => {return {id:item.id,name:item.name,publisher:item.publisher}});
         const res = h.response({
             status:"success",
             data:{
