@@ -2,7 +2,7 @@ const {books} = require("../../../data/bookshelf")
 
 const detailBook = (req,h) => {
     const {bookId} = req.params
-    const findbook = books.find((item) => item.id == parseInt(bookId)) || {}
+    const findbook = books.find((item) => item.id == bookId) || {}
     if(Object.keys(findbook).length === 0 || findbook === null) {
         const response = h.response({
             status:"fail",
