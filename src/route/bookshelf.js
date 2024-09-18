@@ -2,7 +2,7 @@ const allBook = require("../controller/book/GET/index.js")
 const detailBook = require("../controller/book/GET/detail.js")
 const deleteBook = require("../controller/book/DELETE/index.js")
 const editBook = require("../controller/book/PUT/index.js")
-const addBook = require("../controller/book/Post/index.js")
+const addBook = require("../controller/book/POST/index.js")
 
 const routes = [
     {
